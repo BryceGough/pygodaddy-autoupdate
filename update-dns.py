@@ -43,7 +43,7 @@ for domain in domains:
 			client = GoDaddyClient()
 			if client.login(username, password):
 				client.update_dns_record(domain, wan_ip)
-				nipf = open("/usr/local/etc/old_ip_" + realdomain, 'w+')
+				nipf = open("/usr/local/etc/old_ips/" + realdomain, 'w+')
 				nipf.write(wan_ip)
 				nipf.close()
 				print 'DNS has been updated.'
